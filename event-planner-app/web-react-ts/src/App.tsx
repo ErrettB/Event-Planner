@@ -1,6 +1,11 @@
 import React from 'react'
 
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import {
+  Switch,
+  Route,
+  BrowserRouter as Router,
+  Redirect,
+} from 'react-router-dom'
 
 import UserList from './components/UserList'
 
@@ -30,7 +35,7 @@ import {
   People as PeopleIcon,
 } from '@material-ui/icons'
 import Dashboard from './components/Dashboard'
-
+import Login from './components/Login'
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -146,6 +151,8 @@ export default function App() {
   return (
     <Router>
       <div className={classes.root}>
+        <Route exact path="/" render={() => <Redirect to="/login" />} />
+        <Route exact path="/login" component={Login} />
         <CssBaseline />
         <AppBar
           position="absolute"
@@ -218,7 +225,7 @@ export default function App() {
           <div className={classes.appBarSpacer} />
           <Container maxWidth="lg" className={classes.container}>
             <Switch>
-              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/businesses" component={UserList} />
               <Route exact path="/users" component={UserList} />
             </Switch>
