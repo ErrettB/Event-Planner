@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import Login from './components/Login'
+
 import * as serviceWorker from './serviceWorker'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { ApolloProvider } from '@apollo/client'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 const uri = process.env.REACT_APP_GRAPHQL_URI || 'http://localhost:4001/graphql'
 const cache = new InMemoryCache()
@@ -17,7 +19,12 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Login />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/app" component={App} />
+      </Switch>
+    </BrowserRouter>
   </ApolloProvider>,
   document.getElementById('root')
 )

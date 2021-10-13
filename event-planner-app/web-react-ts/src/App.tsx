@@ -151,7 +151,7 @@ export default function App() {
   return (
     <Router>
       <div className={classes.root}>
-        <Route exact path="/" render={() => <Redirect to="/login" />} />
+        {/* <Route exact path="/" render={() => <Redirect exact to="/login" />} /> */}
         <Route exact path="/login" component={Login} />
         <CssBaseline />
         <AppBar
@@ -201,7 +201,7 @@ export default function App() {
           </div>
           <Divider />
           <List>
-            <Link to="/" className={classes.navLink}>
+            <Link to="/dashboard" className={classes.navLink}>
               <ListItem button>
                 <ListItemIcon>
                   <DashboardIcon />
@@ -225,6 +225,7 @@ export default function App() {
           <div className={classes.appBarSpacer} />
           <Container maxWidth="lg" className={classes.container}>
             <Switch>
+              <Route exact path="/login" component={Login} />
               <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/businesses" component={UserList} />
               <Route exact path="/users" component={UserList} />
