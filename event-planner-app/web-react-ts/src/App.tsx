@@ -183,7 +183,7 @@ export default function App() {
               noWrap
               className={classes.title}
             >
-              Welcome To GRANDstack App TS
+              Welcome To Only Events
             </Typography>
           </Toolbar>
         </AppBar>
@@ -226,10 +226,18 @@ export default function App() {
           <Container maxWidth="lg" className={classes.container}>
             <Switch>
               <Route exact path="/login" component={Login} />
-              <Route exact path="/dashboard" component={Dashboard} />
-              <Route exact path="/businesses" component={UserList} />
-              <Route exact path="/users" component={UserList} />
             </Switch>
+
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                width: '70vw',
+                height: '70vh',
+              }}
+            >
+              <Box display="flex" justifyContent="flex-end" bgcolor="red"></Box>
+            </Box>
 
             <Box pt={4}>
               <Copyright />

@@ -23,7 +23,6 @@ type Inputs = {
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
-    background: 'linear-gradient(45deg, #000000 20%, 	#000080 90% )',
   },
   text: {
     margin: '0',
@@ -44,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Login() {
-  const onSubmit = (d: any) => console.log(JSON.stringify(d))
+  const onSubmit = (d: any) => alert(JSON.stringify(d))
   const classes = useStyles()
 
   const {
@@ -61,7 +60,8 @@ export default function Login() {
         justifyContent="center"
         alignItems="center"
         minHeight="100vh"
-        bgcolor="linear-gradient(45deg, #000000 20%, 	#000080 90% )"
+        //bgcolor="linear-gradient(45deg, #000000 20%, 	#000080 90% )"
+        bgcolor="#000040"
       >
         <Box
           sx={{
@@ -71,23 +71,6 @@ export default function Login() {
             display: 'flex',
           }}
         >
-          <Paper variant="outlined" className={classes.paper}>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <h1>Only Events</h1>
-              <label className={classes.text}>
-                <h3>First Name:</h3>
-                <input {...register('name')} />
-              </label>
-              <br />
-
-              <label className={classes.text}>
-                <h3>Last Name:</h3>
-                <input {...register('password')} />
-              </label>
-              <br />
-              <input type="submit" style={{ marginTop: '5px' }} />
-            </form>
-          </Paper>
           <Paper variant="outlined" className={classes.paper}>
             <Box
               display="flex"
@@ -102,7 +85,7 @@ export default function Login() {
                 <Box className={classes.textfield}>
                   <TextField
                     id="outlined-textarea"
-                    {...register('name')}
+                    {...(register('name'), { required: true })}
                     fullWidth
                     label="Username"
                     variant="filled"
@@ -111,15 +94,13 @@ export default function Login() {
                 <Box className={classes.textfield}>
                   <TextField
                     id="outlined-textarea"
-                    {...register('password')}
+                    {...register('password', { required: true })}
                     fullWidth
                     label="Password"
                     variant="filled"
                   ></TextField>
                 </Box>
-
                 <br />
-
                 <Button
                   type="submit"
                   // component={Link}
