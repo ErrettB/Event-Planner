@@ -1,11 +1,16 @@
 import React from 'react'
 
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import {
+  Switch,
+  Route,
+  BrowserRouter as Router,
+  Redirect,
+} from 'react-router-dom'
 
 import UserList from './components/UserList'
 
 import clsx from 'clsx'
-import { makeStyles } from '@material-ui/core/styles'
+
 import {
   CssBaseline,
   Drawer,
@@ -30,6 +35,7 @@ import {
   People as PeopleIcon,
 } from '@material-ui/icons'
 import Dashboard from './components/Dashboard'
+import Login from './components/Login'
 
 function Copyright() {
   return (
@@ -44,10 +50,7 @@ function Copyright() {
   )
 }
 
-const drawerWidth = 240
-
 export default function App() {
-  const classes = useStyles()
   const [open, setOpen] = React.useState(true)
   const handleDrawerOpen = () => {
     setOpen(true)
@@ -56,7 +59,5 @@ export default function App() {
     setOpen(false)
   }
 
-  return (
-      
-  )
+  return <div>Hello</div>
 }

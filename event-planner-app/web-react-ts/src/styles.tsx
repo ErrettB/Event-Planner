@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/styles'
+import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -86,3 +87,5 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: '20px',
   },
 }))
+
+const classes = useStyles()
