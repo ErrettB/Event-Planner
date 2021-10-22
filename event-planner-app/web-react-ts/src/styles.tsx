@@ -1,5 +1,7 @@
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
+
+const drawerWidth = 240
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -89,3 +91,5 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const classes = useStyles()
+
+export default classes
