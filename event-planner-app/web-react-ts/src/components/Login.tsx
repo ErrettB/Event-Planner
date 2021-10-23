@@ -103,8 +103,8 @@ export default function Login() {
                 <br />
                 <Button
                   type="submit"
-                  // component={Link}
-                  // to="/app"
+                  component={Link}
+                  to="/app"
                   variant="contained"
                   style={{ marginTop: '5px', width: '100%', height: '5vh' }}
                   size="large"

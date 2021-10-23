@@ -59,5 +59,24 @@ export default function App() {
     setOpen(false)
   }
 
-  return <div>Hello</div>
+  return (
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      minHeight="100vh"
+      //bgcolor="linear-gradient(45deg, #000000 20%, 	#000080 90% )"
+      bgcolor="#000040"
+    >
+      <Box minHeight="100vh" minWidth="25vw" display="flex">
+        <Box minWidth="100%" bgcolor="blue">
+          Reminders
+        </Box>
+        <Box minWidth="100%" bgcolor="red">
+          To-Do
+        </Box>
+      </Box>
+      <Box minHeight="100vh" minWidth="75vw"></Box>
+    </Box>
+  )
 }
