@@ -26,6 +26,7 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
+  Button,
 } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import {
@@ -36,6 +37,17 @@ import {
 } from '@material-ui/icons'
 import Dashboard from './components/Dashboard'
 import Login from './components/Login'
+import { useState } from 'react'
+import { Animated } from 'react-animated-css'
+import {
+  Inject,
+  ScheduleComponent,
+  Day,
+  Week,
+  WorkWeek,
+  Month,
+  Agenda,
+} from '@syncfusion/ej2-react-schedule'
 
 function Copyright() {
   return (
@@ -58,6 +70,7 @@ export default function App() {
   const handleDrawerClose = () => {
     setOpen(false)
   }
+  const [taskReminders, setTaskReminders] = useState(false)
 
   return (
     <Box
@@ -68,15 +81,34 @@ export default function App() {
       //bgcolor="linear-gradient(45deg, #000000 20%, 	#000080 90% )"
       bgcolor="#000040"
     >
-      <Box minHeight="100vh" minWidth="25vw" display="flex">
-        <Box minWidth="100%" bgcolor="blue">
-          Reminders
+      {taskReminders && (
+        <Box
+          minHeight="100%"
+          minWidth="25vw"
+          display="flex"
+          flexDirection="column"
+        >
+          <Box width="100%" height="50%" bgcolor="blue">
+            Reminders
+          </Box>
+          <Box width="100%" height="50%" bgcolor="red">
+            To-Do
+          </Box>
         </Box>
-        <Box minWidth="100%" bgcolor="red">
-          To-Do
+      )}
+      <Box minHeight="100vh" minWidth="75vw">
+        <Button
+          variant="contained"
+          onClick={() => setTaskReminders(!taskReminders)}
+        >
+          Toggle Reminders and Task
+        </Button>
+        <Box>
+          <ScheduleComponent height="550px" width="100%">
+            <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+          </ScheduleComponent>
         </Box>
       </Box>
-      <Box minHeight="100vh" minWidth="75vw"></Box>
     </Box>
   )
 }
