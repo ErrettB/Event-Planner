@@ -48,6 +48,9 @@ import {
   Month,
   Agenda,
 } from '@syncfusion/ej2-react-schedule'
+import Todo from './components/TodoList'
+import TodoForm from './components/TodoForm'
+// import LocalizationProvider from '@mui/lab/LocalizationProvider'
 
 function Copyright() {
   return (
@@ -70,9 +73,10 @@ export default function App() {
   const handleDrawerClose = () => {
     setOpen(false)
   }
-  const [taskReminders, setTaskReminders] = useState(false)
+  const [taskReminders, setTaskReminders] = useState(true)
 
   return (
+    // <LocalizationProvider dateAdapter={AdapterDateFns}>
     <Box
       display="flex"
       justifyContent="center"
@@ -83,32 +87,36 @@ export default function App() {
     >
       {taskReminders && (
         <Box
-          minHeight="100%"
+          minHeight="100vh"
           minWidth="25vw"
           display="flex"
           flexDirection="column"
+          justifyContent="start"
         >
-          <Box width="100%" height="50%" bgcolor="blue">
-            Reminders
-          </Box>
-          <Box width="100%" height="50%" bgcolor="red">
-            To-Do
+          <Box width="100%" minHeight="40vh" m="40px 10px" bgcolor="blue"></Box>
+          <Box width="100%" minHeight="40vh" m="40px 10px">
+            <TodoForm />
           </Box>
         </Box>
       )}
+
       <Box minHeight="100vh" minWidth="75vw">
-        <Button
-          variant="contained"
-          onClick={() => setTaskReminders(!taskReminders)}
-        >
-          Toggle Reminders and Task
-        </Button>
-        <Box>
-          <ScheduleComponent height="550px" width="100%">
-            <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-          </ScheduleComponent>
+        <Box minHeight="10px" m="40px">
+          <Button
+            variant="contained"
+            onClick={() => setTaskReminders(!taskReminders)}
+          >
+            Toggle Reminders and Task
+          </Button>
+
+          <Box>
+            <ScheduleComponent height="600px" width="100%">
+              <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+            </ScheduleComponent>
+          </Box>
         </Box>
       </Box>
     </Box>
+    // </LocalizationProvider>
   )
 }
