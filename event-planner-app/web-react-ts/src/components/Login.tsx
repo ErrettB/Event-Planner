@@ -69,6 +69,7 @@ export default function Login() {
             height: '70vh',
             p: '10px',
             display: 'flex',
+            color:'teal'
           }}
         >
           <Paper variant="outlined" className={classes.paper}>
@@ -98,6 +99,7 @@ export default function Login() {
                     fullWidth
                     label="Password"
                     variant="filled"
+                    type='password'
                   ></TextField>
                 </Box>
                 <br />

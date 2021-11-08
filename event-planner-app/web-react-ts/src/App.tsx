@@ -38,7 +38,7 @@ import {
 import Dashboard from './components/Dashboard'
 import Login from './components/Login'
 import { useState } from 'react'
-import { Animated } from 'react-animated-css'
+
 import {
   Inject,
   ScheduleComponent,

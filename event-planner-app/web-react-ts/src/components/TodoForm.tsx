@@ -10,8 +10,7 @@ import { useForm } from 'react-hook-form'
 import { empty } from '@apollo/client'
 import TodoList from './TodoList'
 import { IToDo } from '../Interfaces'
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
+
 
 export default function TodoForm() {
   const [task, setTask] = useState('')
@@ -64,10 +63,7 @@ export default function TodoForm() {
         Create new To-Do
       </Button>
 
-      <DatePicker
-        selected={deadline}
-        onChange={(event: Date) => setDeadline(event)}
-      />
+      
 
       {modalButton && (
         <Dialog
