@@ -91,7 +91,7 @@ export default function App() {
           minWidth="25vw"
           display="flex"
           flexDirection="column"
-          justifyContent="start"
+          justifyContent="start" 
         >
           <Box width="100%" minHeight="40vh" m="40px 10px" bgcolor="blue"></Box>
           <Box width="100%" minHeight="40vh" m="40px 10px">
