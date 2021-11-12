@@ -38,7 +38,7 @@ import {
 import Dashboard from './components/Dashboard'
 import Login from './components/Login'
 import { useState } from 'react'
-import { Animated } from 'react-animated-css'
+
 import {
   Inject,
   ScheduleComponent,
@@ -110,7 +110,7 @@ export default function App() {
           </Button>
 
           <Box>
-            <ScheduleComponent height="600px" width="100%">
+            <ScheduleComponent height="50%" width="100%">
               <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
             </ScheduleComponent>
           </Box>

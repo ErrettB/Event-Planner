@@ -11,7 +11,7 @@ import { empty } from '@apollo/client'
 import TodoList from './TodoList'
 import { IToDo } from '../Interfaces'
 
-import 'react-datepicker/dist/react-datepicker.css'
+
 
 export default function TodoForm() {
   const [task, setTask] = useState('')
