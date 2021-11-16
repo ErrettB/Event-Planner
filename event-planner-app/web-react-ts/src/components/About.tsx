@@ -1,4 +1,4 @@
-import { Box, makeStyles } from '@material-ui/core'
+import { Box, makeStyles, Typography } from '@material-ui/core'
 import React from 'react'
 
 export default function About() {
@@ -37,7 +37,12 @@ export default function About() {
         //bgcolor="linear-gradient(45deg, #000000 20%, 	#000080 90% )"
         bgcolor="#000040"
       >
-          About Page</Box> 
+        <Box>
+          <Typography variant="h1" gutterBottom>
+            Only Events
+            </Typography>
+            </Box>
+            </Box> 
         </div>
     )
 }
