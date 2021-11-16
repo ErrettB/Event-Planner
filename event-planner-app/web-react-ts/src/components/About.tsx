@@ -37,10 +37,17 @@ export default function About() {
         //bgcolor="linear-gradient(45deg, #000000 20%, 	#000080 90% )"
         bgcolor="#000040"
       >
-        <Box>
+        <Box 
+        display='flex'
+        justifyContent='center'
+        alignItems='center'
+        minHeight='20vw'>
           <Typography variant="h1" gutterBottom>
             Only Events
             </Typography>
+            <Typography variant="h3" gutterBottom>
+              Get on the same page with your <span color=""></span>
+              </Typography>
             </Box>
             </Box> 
         </div>
