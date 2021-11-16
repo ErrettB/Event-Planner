@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import Login from './components/Login'
+import NavBar from './components/NavBarComponents/NavBar'
 
 import * as serviceWorker from './serviceWorker'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
@@ -20,10 +21,14 @@ const client = new ApolloClient({
 ReactDOM.render(
   <ApolloProvider client={client}>
     <BrowserRouter>
+    <NavBar/>
       <Switch>
+      
         <Route exact path="/" component={Login} />
         <Route exact path="/app" component={App} />
+        
       </Switch>
+      
     </BrowserRouter>
   </ApolloProvider>,
   document.getElementById('root')
