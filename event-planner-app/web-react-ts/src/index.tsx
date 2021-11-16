@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import Login from './components/Login'
+import About from './components/About'
 import NavBar from './components/NavBarComponents/NavBar'
 
 import * as serviceWorker from './serviceWorker'
@@ -24,8 +25,9 @@ ReactDOM.render(
     <NavBar/>
       <Switch>
       
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={About} />
         <Route exact path="/app" component={App} />
+        <Route exact path='/login' component={Login}/>
         
       </Switch>
       
