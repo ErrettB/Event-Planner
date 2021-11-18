@@ -46,7 +46,8 @@ export default function About() {
             Only Events
             </Typography>
             <Typography variant="h3" gutterBottom>
-              Get on the same page with your <span color=""></span>
+              Get on the same page with your <span color="black"> colleagues</span ><span color='blue'>Family</span>
+              <span color='light-blue'>Family</span> 
               </Typography>
             </Box>
             </Box> 
