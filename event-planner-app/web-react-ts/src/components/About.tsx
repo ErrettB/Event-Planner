@@ -1,10 +1,13 @@
-import { Box, makeStyles, Typography } from '@material-ui/core'
+import { Box, makeStyles, withStyles, Typography, Paper, createTheme, ThemeProvider, styled  } from '@material-ui/core'
 import React from 'react'
+
+
 
 export default function About() {
     const useStyles = makeStyles((theme) => ({
         root: {
           height: '100vh',
+          backgroundImage: "linear-gradient(45deg, #000000, 20%, #1d007d, 80%, #3d74ff)"
         },
         text: {
           margin: '0',
@@ -25,30 +28,45 @@ export default function About() {
       }))
       const classes = useStyles()
 
+      const Item = styled(Paper)(({ theme}) => ({
+        textAlign: 'center'
+      }))
+
+      const WhiteTextTypography = withStyles({
+        root: {
+          color: "#FFFFFF"
+        }
+      })(Typography);
+
 
     return (
         <div className={classes.root}>
+          
             
            <Box
         display="flex"
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
-        //bgcolor="linear-gradient(45deg, #000000 20%, 	#000080 90% )"
-        bgcolor="#000040"
+        justifyContent="center"  
+        alignContent="center"    
+        minHeight="100vh"     
+        // bgcolor="#000040"
       >
         <Box 
-        display='flex'
-        justifyContent='center'
-        alignItems='center'
-        minHeight='20vw'>
-          <Typography variant="h1" gutterBottom>
+        display='flex'      
+        minHeight='20vh'
+        flexDirection="column"
+         
+        alignContent="center" 
+        width='50vw'
+        
+        >
+          
+          <WhiteTextTypography align="center" variant="h1" gutterBottom>
             Only Events
-            </Typography>
-            <Typography variant="h3" gutterBottom>
-              Get on the same page with your <span color="black"> colleagues</span ><span color='blue'>Family</span>
-              <span color='light-blue'>Family</span> 
-              </Typography>
+            </WhiteTextTypography>
+            <WhiteTextTypography variant="h3" align="center" gutterBottom>
+              Get on the same page with your Friends, Family and Collegues
+              </WhiteTextTypography>
+              
             </Box>
             </Box> 
         </div>

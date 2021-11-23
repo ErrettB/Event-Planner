@@ -27,6 +27,7 @@ import {
   ListItemText,
   ListItemIcon,
   Button,
+  createMuiTheme,
 } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import {
@@ -73,6 +74,8 @@ export default function App() {
   const handleDrawerClose = () => {
     setOpen(false)
   }
+
+  
   const [taskReminders, setTaskReminders] = useState(true)
 
   return (
