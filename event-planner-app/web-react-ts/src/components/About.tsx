@@ -7,7 +7,9 @@ export default function About() {
     const useStyles = makeStyles((theme) => ({
         root: {
           height: '100vh',
-          backgroundImage: "linear-gradient(45deg, #000000, 20%, #1d007d, 80%, #3d74ff)"
+          backgroundImage: "linear-gradient(45deg, #000000, 20%, #1d007d, 80%, #3d74ff)",
+          margin: "0px",
+          padding: '0px'
         },
         text: {
           margin: '0',
@@ -34,16 +36,32 @@ export default function About() {
 
       const WhiteTextTypography = withStyles({
         root: {
-          color: "#FFFFFF"
+          color: "#FFFFFF",
+          fontSize: '70px'
         }
       })(Typography);
+
+      const BlackTextTypography = withStyles({
+        root: {
+          color: "#000000",
+          fontSize: '40px'
+
+          
+        }
+      })(Typography);
+
+      const SubTextTypography = withStyles({
+        root:{
+          fontSize: '40px',
+          color:"#FFFFFF"
+        }
+      })(Typography)
 
 
     return (
         <div className={classes.root}>
           
-            
-           <Box
+      <Box
         display="flex"
         justifyContent="center"  
         alignContent="center"    
@@ -53,19 +71,18 @@ export default function About() {
         <Box 
         display='flex'      
         minHeight='20vh'
-        flexDirection="column"
-         
-        alignContent="center" 
-        width='50vw'
-        
+        flexDirection="column"        
+        alignContent="center"        
+        width='90vw'
+        padding="10vh 0 10vh 0"      
         >
           
-          <WhiteTextTypography align="center" variant="h1" gutterBottom>
-            Only Events
+          <WhiteTextTypography align="center" variant="h1" gutterBottom >
+            The perfect date for you
             </WhiteTextTypography>
-            <WhiteTextTypography variant="h3" align="center" gutterBottom>
-              Get on the same page with your Friends, Family and Collegues
-              </WhiteTextTypography>
+            <SubTextTypography variant="h4" align="center" gutterBottom>
+              Get on the same page with your <BlackTextTypography  >Friends, Family and Collegues</BlackTextTypography>
+              </SubTextTypography>
               
             </Box>
             </Box> 
