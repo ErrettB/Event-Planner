@@ -17,7 +17,7 @@ const Navbar = (props:any) => {
         </NavLink> */}
         <Bars />
         <NavMenu>
-          <NavLink to='/about' >
+          <NavLink to='/' >
             About
           </NavLink>
           <NavLink to='/services' >
@@ -26,9 +26,9 @@ const Navbar = (props:any) => {
           <NavLink to='/contact-us' >
             Contact Us
           </NavLink>
-          <NavLink to='/' >
+          <NavLink to='/login' >
             Sign Up
-          </NavLink> */}
+          </NavLink> 
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
