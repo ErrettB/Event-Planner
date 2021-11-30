@@ -99,14 +99,15 @@ export default function About() {
             
             <Grid 
             container             
-            xs = {12}        
+            xs = {12}                             
             >            
               <Grid container                           
                 xs = {6}
-                justifyContent='flex-end'               
+                justifyContent='flex-end'
+                              
                 >                
                 <Grid item xs={12} >
-                <Paper >
+                <Paper style={{ marginBottom:'40px'}} >
                   Team
                   </Paper>
                 </Grid>
@@ -119,15 +120,19 @@ export default function About() {
               </Grid>
 
                 <Grid item xs = {6}>
-                    <Paper style={{height:'100%'}}>
+                  
+                    <Paper style={{height:'100%', marginLeft:'20px'}} >
                       Test
                       </Paper>
+                      
                   </Grid>
                 
                 <Grid item xs={12} >
+                  <Box mt={2}>
                   <Paper> 
                     Lower bar
                   </Paper>
+                  </Box>
                   </Grid>
             </Grid>
             </Box>         
