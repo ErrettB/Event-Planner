@@ -27,7 +27,8 @@ import {
   ListItemText,
   ListItemIcon,
   Button,
-  createMuiTheme,
+  createTheme,
+  ThemeProvider,
 } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import {
@@ -63,8 +64,24 @@ function Copyright() {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
-  )
-}
+  )}
+  
+  export const theme = createTheme({
+    overrides: {
+      MuiCssBaseline: {
+        '@global': {
+           body: {
+             background: 'linear-gradient(45deg, #000000, 20%, #1d007d, 80%, #3d74ff)',
+             backgroundRepeat: "no-repeat",
+             backgroundAttachment: "fixed",
+          },
+        },
+      },
+    },
+    palette: {
+      type: "dark",
+    },
+  })
 
 export default function App() {
   const [open, setOpen] = React.useState(true)
@@ -79,14 +96,14 @@ export default function App() {
   const [taskReminders, setTaskReminders] = useState(true)
 
   return (
-    // <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <ThemeProvider theme={theme}>
+      <Container component="main" maxWidth="lg">
+        <CssBaseline/>
     <Box
       display="flex"
       justifyContent="center"
       alignItems="center"
-      minHeight="100vh"
-      //bgcolor="linear-gradient(45deg, #000000 20%, 	#000080 90% )"
-      bgcolor="#000040"
+      minHeight="100vh"     
     >
       {taskReminders && (
         <Box
@@ -120,6 +137,7 @@ export default function App() {
         </Box>
       </Box>
     </Box>
-    // </LocalizationProvider>
+    </Container>
+    </ThemeProvider>
   )
 }
