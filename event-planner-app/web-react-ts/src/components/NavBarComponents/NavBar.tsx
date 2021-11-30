@@ -26,11 +26,7 @@ const Navbar = (props:any) => {
           <NavLink to='/contact-us' >
             Contact Us
           </NavLink>
-<<<<<<< HEAD
           <NavLink to='/' >
-=======
-          {/* <NavLink to='/login' >
->>>>>>> 61d449ec7c038a67b1062f74b31e9f3f24bc26c9
             Sign Up
           </NavLink> */}
           {/* Second Nav */}
