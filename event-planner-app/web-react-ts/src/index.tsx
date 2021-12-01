@@ -12,6 +12,7 @@ import { ApolloProvider } from '@apollo/client'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/core'
 import theme from './theme'
+import SignUp from './components/SignUp'
 
 const uri = process.env.REACT_APP_GRAPHQL_URI || 'http://localhost:4001/graphql'
 const cache = new InMemoryCache()
@@ -31,6 +32,7 @@ ReactDOM.render(
         <Route exact path="/" component={About} />
         <Route exact path="/app" component={App} />
         <Route exact path='/login' component={Login}/>
+        <Route exact path='/signup' component={SignUp}/>
         
       </Switch>
       

@@ -84,14 +84,13 @@ export default function About() {
         width='90vw'
         padding="20vh 0 20vh 0"      
         >
-          
+         
           <WhiteTextTypography align="center" variant="h1" gutterBottom >
             The perfect date for you
             </WhiteTextTypography>
             <SubTextTypography variant="h4" align="center" gutterBottom>
-              Get on the same page with your <BlackTextTypography >Friends, Family and Collegues.</BlackTextTypography>
-              </SubTextTypography>
-              
+              Get on the same page with your <BlackTextTypography >Friends, Family and Colleagues</BlackTextTypography>
+              </SubTextTypography>              
             </Box>
             </Box> 
 

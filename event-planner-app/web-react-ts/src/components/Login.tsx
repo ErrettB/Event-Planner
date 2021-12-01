@@ -1,5 +1,6 @@
 import { Avatar, Box, Button, Checkbox, Container, createTheme, CssBaseline, FormControlLabel, Grid, Link, TextField, ThemeProvider, Typography } from '@material-ui/core';
 import * as React from 'react';
+import theme from "../theme"
 // import Avatar from '@material/core';
 // import Button from '@material/core/Button';
 // import CssBaseline from '@material/core/CssBaseline';
@@ -28,22 +29,6 @@ function Copyright(props: any) {
   );
 }
 
-export const theme = createTheme({
-  overrides: {
-    MuiCssBaseline: {
-      '@global': {
-         body: {
-           background: 'linear-gradient(45deg, #000000, 20%, #1d007d, 80%, #3d74ff)',
-           backgroundRepeat: "no-repeat",
-           backgroundAttachment: "fixed",
-        },
-      },
-    },
-  },
-  palette: {
-    type: "dark",
-  },
-})
 
 export default function SignIn() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

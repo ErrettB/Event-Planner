@@ -1,5 +1,6 @@
 import { Typography, createTheme, Container, CssBaseline, Box, Avatar, Grid, TextField, FormControlLabel, Checkbox, Button,Link,ThemeProvider} from '@material-ui/core';
 import * as React from 'react';
+import theme from '../theme'
 
 
 function Copyright(props: any) {
@@ -15,22 +16,6 @@ function Copyright(props: any) {
   );
 }
 
-export const theme = createTheme({
-  overrides: {
-    MuiCssBaseline: {
-      '@global': {
-         body: {
-           background: 'linear-gradient(45deg, #000000, 20%, #1d007d, 80%, #3d74ff)',
-           backgroundRepeat: "no-repeat",
-           backgroundAttachment: "fixed",
-        },
-      },
-    },
-  },
-  palette: {
-    type: "dark",
-  },
-})
 
 export default function SignUp() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -45,7 +30,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="lg">
         <CssBaseline />
         <Box
           sx={{
