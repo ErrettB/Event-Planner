@@ -7,7 +7,6 @@ import {
   Redirect,
 } from 'react-router-dom'
 
-import UserList from './components/UserList'
 
 import clsx from 'clsx'
 
@@ -37,7 +36,7 @@ import {
   Dashboard as DashboardIcon,
   People as PeopleIcon,
 } from '@material-ui/icons'
-import Dashboard from './components/Dashboard'
+
 import Login from './components/Login'
 import { useState } from 'react'
 
