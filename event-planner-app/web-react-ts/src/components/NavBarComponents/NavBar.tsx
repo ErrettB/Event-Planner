@@ -17,7 +17,7 @@ const Navbar = (props:any) => {
         </NavLink> */}
         <Bars />
         <NavMenu>
-          <NavLink to='/' >
+          <NavLink to='/about' >
             About
           </NavLink>
           <NavLink to='/services' >
