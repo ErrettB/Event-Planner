@@ -1,4 +1,4 @@
-import { Box, Container, CssBaseline, Grid, Paper, styled, ThemeProvider } from '@material-ui/core'
+import { Box, Container, CssBaseline, Grid, Paper, styled, ThemeProvider, Typography } from '@material-ui/core'
 import React from 'react'
 import theme from '../theme'
 
@@ -13,7 +13,8 @@ const ContactBox = styled(Paper)(({theme}) => ({
 
 const InnertBox = styled(Paper)(({theme}) => ({
     minWidth: '50%',
-    marginBottom: '5%'
+    margin: '5%'
+
 }))
 
 const rows = [
@@ -40,9 +41,9 @@ export default function ContactUs() {
                   {rows.map(row =>(
                       <Grid item xs={6}>
                       <ContactBox>
-                          <InnertBox>{row.name}</InnertBox>
-                          <InnertBox>{row.age}</InnertBox>
-                          <InnertBox>{row.email}</InnertBox>  </ContactBox>
+                          <InnertBox> <Typography variant='h4'>{row.name}</Typography></InnertBox>
+                          <InnertBox><Typography variant='h4'>{row.age}</Typography></InnertBox>
+                          <InnertBox><Typography variant='h4'>{row.email}</Typography></InnertBox>  </ContactBox>
                               </Grid>
                   ))}                          
                     </Grid>
