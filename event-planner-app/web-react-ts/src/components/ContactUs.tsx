@@ -13,7 +13,7 @@ const ContactBox = styled(Paper)(({theme}) => ({
 
 const InnertBox = styled(Paper)(({theme}) => ({
     minWidth: '50%',
-    marginBottom: 
+    marginBottom: '5%'
 }))
 
 const rows = [
